@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Resume - Le The Hoang Hai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c5282; /* A deep blue */
+            --secondary-color: #2d3748; /* Dark gray for text */
+            --accent-color: #e2e8f0; /* Light gray for borders */
+            --background-color: #f7fafc; /* Very light gray page background */
+            --card-background: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--secondary-color);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 2rem;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        header .job-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary-color);
+        }
+
+        .contact-info svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-item, .project-item {
+            margin-bottom: 2rem;
+        }
+        
+        .experience-item:last-child, .project-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .date {
+            font-style: italic;
+            color: #718096; /* Medium gray */
+            font-size: 0.9rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .skills-grid h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 0.75rem;
+        }
+
+        .skills-grid ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .skills-grid li {
+            margin-bottom: 0.25rem;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 0.75rem;
+            }
+            .date {
+                margin-top: 0.25rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+             body {
+                font-size: 15px;
+            }
+            .container {
+                padding: 1.5rem;
+            }
+             header h1 {
+                font-size: 2rem;
+            }
+            header .job-title {
+                font-size: 1.1rem;
+            }
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>LE THE HOANG HAI</h1>
+            <p class="job-title">AI/ML ENGINEER</p>
+            <div class="contact-info">
+                <a href="tel:+84868890658">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg>
+                    (+84) 868 890 658
+                </a>
+                <a href="mailto:lethehoanghai@gmail.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/></svg>
+                    lethehoanghai@gmail.com
+                </a>
+                <a href="https://github.com/hoanghailethe" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.83,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/></svg>
+                    github.com/hoanghailethe
+                </a>
+                <a href="https://dev.haihoang.org" target="_blank">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    dev.haihoang.org
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <section class="summary">
+                <h2>Professional Summary</h2>
+                <p>I'm an engineer who enjoys building intelligent systems that solve real-world problems. Coming from a strong backend development background, I've spent the last few years diving deep into the machine learning world. I truly enjoy the whole process, from wrangling messy datasets to fine-tuning generative AI models on platforms like AWS SageMaker and Bedrock. My main goal is to bridge the gap between raw data and real business value by building smart, scalable applications.</p>
+            </section>
+
+            <section class="skills">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div>
+                        <h4>AI/ML & Data Science</h4>
+                        <ul>
+                            <li><strong>Frameworks:</strong> TensorFlow, PyTorch</li>
+                            <li><strong>GenAI & NLP:</strong> Model Fine-Tuning, AWS Bedrock, Hugging Face</li>
+                            <li><strong>ML Platforms:</strong> AWS SageMaker, Google Colab</li>
+                            <li><strong>Libraries:</strong> Python (Pandas, NumPy, Scikit-learn)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Cloud & MLOps</h4>
+                         <ul>
+                            <li><strong>AWS:</strong> SageMaker, Bedrock, EC2, S3, Lambda, API Gateway</li>
+                            <li><strong>CI/CD for ML:</strong> Jenkins, AWS CodePipeline, CloudFormation, IaC</li>
+                            <li><strong>Containerization:</strong> Docker, Kubernetes</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Backend & Architecture</h4>
+                        <ul>
+                            <li><strong>Languages:</strong> Python, Go (Golang), Java</li>
+                            <li><strong>Frameworks:</strong> Spring Boot, FastAPI</li>
+                            <li><strong>Architecture:</strong> Microservices, DDD, Event-Driven</li>
+                        </ul>
+                    </div>
+                     <div>
+                        <h4>Database & Data Tools</h4>
+                        <ul>
+                            <li><strong>NoSQL:</strong> DynamoDB, MongoDB</li>
+                            <li><strong>Relational:</strong> MySQL, Oracle SQL</li>
+                            <li><strong>Data Streaming:</strong> Apache Kafka</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="experience">
+                <h2>Professional Experience</h2>
+                <div class="experience-item">
+                    <div class="job-header">
+                        <h3>Backend Software Engineer | Deputy</h3>
+                        <span class="date">Jan 2023 - Present</span>
+                    </div>
+                    <ul>
+                        <li>To help managers quickly understand employee sentiment, I led a project to automatically summarize thousands of feedback comments. I fine-tuned a generative AI model using AWS Bedrock, which cut manual analysis time by over 30%.</li>
+                        <li>I designed the data pipeline for this feature, which involved gathering, cleaning, and transforming large amounts of text. A key part of this was careful feature engineering to make sure our model was as accurate as possible.</li>
+                        <li>Finding the right approach was crucial, so I ran a series of experiments on AWS SageMaker. By testing different models and tuning their parameters, I improved our key performance metrics by 15% before we went live.</li>
+                        <li>I packaged the final NLP model into a scalable microservice and integrated it into our production environment, where it provides real-time insights for our users.</li>
+                        <li>Ensuring data privacy was paramount, so I implemented robust masking algorithms to protect sensitive personal information and prepare the data safely for training.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                     <div class="job-header">
+                        <h3>Full-stack Developer | Integro Technologies</h3>
+                        <span class="date">2021 - 2023</span>
+                    </div>
+                    <ul>
+                        <li>I built and managed the company's real-time data pipelines using Apache Kafka. This system handled over 100,000 events daily, making sure our different microservices could communicate reliably.</li>
+                        <li>I took the lead on a major performance optimization effort for our Java systems and SQL databases, which resulted in 40% faster data retrieval and 25% quicker API response times.</li>
+                    </ul>
+                </div>
+                 <div class="experience-item">
+                     <div class="job-header">
+                        <h3>Digital Transformation Contributor | CEO Group</h3>
+                        <span class="date">2019 - 2020</span>
+                    </div>
+                    <ul>
+                        <li>I developed a data tool in Python and Pandas that automated the cleaning of complex Excel reports. This was a huge help to the R&D team, making their reporting four times faster.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="certifications">
+                <h2>IT Certifications</h2>
+                <p><strong>AWS Certified Solutions Architect – Associate (SAA-C03)</strong></p>
+                <p>Expiration: October 30, 2026 | Validation Number: HLK5YN52XNRQQ9C7</p>
+            </section>
+
+            <section class="education">
+                <h2>Education</h2>
+                <p><strong>Techmaster Institution (2020-2021):</strong> Java Full-stack Programming Bootcamp</p>
+                <p><strong>National Economics University (2012-2016):</strong> Bachelor of Economics, Major in Investment Economics</p>
+            </section>
+            
+            <section class="projects">
+                <h2>Personal & Technical Projects</h2>
+                <div class="project-item">
+                    <h3>Sentiment Analysis API for Product Reviews</h3>
+                    <p>I built a tool from scratch to analyze product review sentiment. I scraped data, trained a machine learning model to understand the text, and deployed it as a REST API with FastAPI and Docker. | <a href="https://github.com/hoanghailethe" target="_blank">View on GitHub</a></p>
+                    <p><em>Tech Stack: Python, Scikit-learn, Pandas, FastAPI, Docker, AWS EC2.</em></p>
+                </div>
+                 <div class="project-item">
+                    <h3>Global Money Convertor (Serverless Application)</h3>
+                    <p>I designed a fully serverless app for real-time currency conversion, which automatically updates exchange rates every day. | <a href="https://djf4coxk6u649.cloudfront.net/MoneyConvertor/index.html" target="_blank">View Project</a></p>
+                    <p><em>Tech Stack: AWS Lambda, API Gateway, S3, CloudFront, EventBridge, CloudFormation.</em></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
+
