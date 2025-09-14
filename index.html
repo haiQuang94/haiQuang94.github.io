@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Le The Hoang Hai</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -232,7 +232,7 @@
                 </a>
                 <a href="https://haiquang94.github.io/" target="_blank">
                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-                     haiquang94.github.io/
+                     haiquang94.github.io
                 </a>
             </div>
         </header>
@@ -250,7 +250,7 @@
                         <h4>AI/ML & Data Science</h4>
                         <ul>
                             <li><strong>Frameworks:</strong> TensorFlow, PyTorch</li>
-                            <li><strong>GenAI & NLP:</strong> Model Fine-Tuning, AWS Bedrock, Hugging Face</li>
+                            <li><strong>GenAI & NLP:</strong> Retrieval-Augmented Generation (RAG), Model Fine-Tuning, AWS Bedrock, Hugging Face</li>
                             <li><strong>ML Platforms:</strong> AWS SageMaker, Google Colab</li>
                             <li><strong>Libraries:</strong> Python (Pandas, NumPy, Scikit-learn)</li>
                         </ul>
@@ -276,6 +276,7 @@
                         <ul>
                             <li><strong>NoSQL:</strong> DynamoDB, MongoDB</li>
                             <li><strong>Relational:</strong> MySQL, Oracle SQL</li>
+                            <li><strong>Vector Databases:</strong> Pinecone, FAISS</li>
                             <li><strong>Data Streaming:</strong> Apache Kafka</li>
                         </ul>
                     </div>
@@ -290,6 +291,7 @@
                         <span class="date">Jan 2023 - Present</span>
                     </div>
                     <ul>
+                        <li>I architected and implemented a Retrieval-Augmented Generation (RAG) agent to power an internal HR policy chatbot. This involved creating vector embeddings for a large corpus of documents and setting up a system to provide employees with accurate, contextually-aware answers, reducing routine support queries by 20%.</li>
                         <li>To help managers quickly understand employee sentiment, I led a project to automatically summarize thousands of feedback comments. I fine-tuned a generative AI model using AWS Bedrock, which cut manual analysis time by over 30%.</li>
                         <li>I designed the data pipeline for this feature, which involved gathering, cleaning, and transforming large amounts of text. A key part of this was careful feature engineering to make sure our model was as accurate as possible.</li>
                         <li>Finding the right approach was crucial, so I ran a series of experiments on AWS SageMaker. By testing different models and tuning their parameters, I improved our key performance metrics by 15% before we went live.</li>
@@ -333,6 +335,11 @@
             <section class="projects">
                 <h2>Personal & Technical Projects</h2>
                 <div class="project-item">
+                    <h3>RAG-Based Research Assistant</h3>
+                    <p>Developed a personal research assistant that uses a RAG pipeline to answer complex questions from a library of technical PDF documents. The project involved document chunking, creating embeddings, and orchestrating retrieval and generation steps with an open-source LLM. | <a href="https://github.com/hoanghailethe" target="_blank">View on GitHub</a></p>
+                    <p><em>Tech Stack: Python, LangChain, Hugging Face Transformers, FAISS, Streamlit.</em></p>
+                </div>
+                <div class="project-item">
                     <h3>Sentiment Analysis API for Product Reviews</h3>
                     <p>I built a tool from scratch to analyze product review sentiment. I scraped data, trained a machine learning model to understand the text, and deployed it as a REST API with FastAPI and Docker. | <a href="https://github.com/hoanghailethe" target="_blank">View on GitHub</a></p>
                     <p><em>Tech Stack: Python, Scikit-learn, Pandas, FastAPI, Docker, AWS EC2.</em></p>
@@ -348,4 +355,5 @@
 
 </body>
 </html>
+
 
